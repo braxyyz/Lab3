@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: lightcoral;
+    grid-area: hd;
+}   
+
+main{
+    background-color: lightblue;
+    grid-area: mn;
+}
+
+nav{
+    background-color: bisque;
+    grid-area: nv;
+}
+
+footer{
+    background-color: azure;
+    grid-area: ft;
+}
+
+@media (max-width:767px) {
+    body{
+        display: grid;
+        grid-template-areas: 
+        "hd"
+        "nv"
+        "mn"
+        "ft";
+        gap: 10px;
+    }
+}
+
+@media (min-width:768px) {
+    body{
+        display: grid;
+        grid-template-areas:
+        "hd hd"
+        "nv mn"
+        "ft ft";
+        grid-template-columns: 220px 1fr;
+    }
+    .card-grid{
+        display: grid;
+        background-color: lightcoral;
+        grid-template-columns: repeat(2, 1fr);
+    }
+        .card-top{
+        background-color: lightcoral;
+        grid-column: 1/-1;
+    }
+
+}
